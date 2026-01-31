@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto budak | 8c autis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        :root {
+            --primary-color: #7c3aed;
+            --secondary-color: #10b981;
+            --accent-color: #f59e0b;
+            --dark-color: #0f172a;
+            --light-color: #f8fafc;
+            --gray-color: #64748b;
+            --hyper-gradient: linear-gradient(135deg, #7c3aed, #10b981, #f59e0b);
+            --hyper-gradient-transparent: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(16, 185, 129, 0.1), rgba(245, 158, 11, 0.1));
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 20px 40px rgba(124, 58, 237, 0.15);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        body {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Enhanced Background Elements - Professional Version */
+        .background-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .geometric-element {
+            position: absolute;
+            border-radius: 8px;
+            background: var(--hyper-gradient-transparent);
+            filter: blur(30px);
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .geometric-element:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+        
+        .geometric-element:nth-child(2) {
+            width: 250px;
+            height: 250px;
+            top: 60%;
+            right: 8%;
+            animation-delay: 5s;
+            border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+        }
+        
+        .geometric-element:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            bottom: 10%;
+            left: 12%;
+            animation-delay: 10s;
+            border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+        }
+        
+        .geometric-element:nth-child(4) {
+            width: 350px;
+            height: 150px;
+            top: 15%;
+            right: 15%;
+            animation-delay: 15s;
+            border-radius: 10px;
+        }
+        
+        /* New Professional Background Elements - Floating Particles */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: particleFloat 20s infinite linear;
+        }
+        
+        .particle:nth-child(5n) {
+            background-color: rgba(124, 58, 237, 0.4);
+            width: 6px;
+            height: 6px;
+        }
+        
+        .particle:nth-child(3n) {
+            background-color: rgba(16, 185, 129, 0.4);
+        }
+        
+        .particle:nth-child(7n) {
+            background-color: rgba(245, 158, 11, 0.4);
+        }
+        
+        /* New Professional Background Elements - Grid Lines */
+        .grid-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 40s infinite linear;
+            opacity: 0.3;
+        }
+        
+        /* New Professional Background Elements - Light Beams */
+        .light-beam {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: rotate(45deg);
+            animation: beamMove 30s infinite linear;
+        }
+        
+        /* New Professional Background Elements - Hexagon Pattern */
+        .hexagon-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(124, 58, 237, 0.05) 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.05) 2px, transparent 2px);
+            background-size: 100px 100px;
+            animation: patternPulse 60s infinite alternate;
+        }
+        
+        /* Tema Elemen di Header Atas */
+        .header-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            z-index: 999;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .header-element {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--hyper-gradient-transparent);
+            filter: blur(20px);
+            animation: headerFloat 15s infinite ease-in-out;
+        }
+        
+        .header-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 10px;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .header-element:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 20px;
+            right: 15%;
+            animation-delay: 3s;
+        }
+        
+        .header-element:nth-child(3) {
+            width: 40px;
+            height: 40px;
+            top: 40px;
+            left: 25%;
+            animation-delay: 6s;
+        }
+        
+        .header-element:nth-child(4) {
+            width: 70px;
+            height: 70px;
+            top: 15px;
+            right: 25%;
+            animation-delay: 9s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-30px) translateX(20px) rotate(5deg);
+            }
+            66% {
+                transform: translateY(20px) translateX(-15px) rotate(-5deg);
+            }
+        }
+        
+        @keyframes headerFloat {
+            0%, 100% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+            50% {
+                transform: translateY(-10px) translateX(10px) scale(1.1);
+            }
+        }
+        
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) translateX(0);
+            }
+            100% {
+                transform: translateY(-100px) translateX(20px);
+            }
+        }
+        
+        @keyframes gridMove {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 50px 50px;
+            }
+        }
+        
+        @keyframes beamMove {
+            0% {
+                transform: rotate(45deg) translateX(-100%);
+            }
+            100% {
+                transform: rotate(45deg) translateX(100%);
+            }
+        }
+        
+        @keyframes patternPulse {
+            0% {
+                opacity: 0.3;
+                background-size: 100px 100px;
+            }
+            100% {
+                opacity: 0.7;
+                background-size: 120px 120px;
+            }
+        }
+        
+        /* Enhanced Scroll Effects */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: var(--hyper-gradient);
+            z-index: 1001;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+        
+        /* Header & Navigation */
+        header {
+            padding: 2rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background-color: rgba(15, 23, 42, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1002;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 1.8rem;
+            background: var(--hyper-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            background: var(--hyper-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .logo-text span {
+            color: var(--accent-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--hyper-gradient);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Music Player Styles - POJOK KANAN BAWAH */
+        .music-player-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+        
+        .music-player {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        
+        .music-player.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .player-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .player-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: var(--hyper-gradient);
+            border: none;
+            color: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .player-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+        }
+        
+        .player-info {
+            margin-bottom: 10px;
+        }
+        
+        .song-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .song-artist {
+            color: var(--gray-color);
+            font-size: 0.75rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: var(--hyper-gradient);
+            border-radius: 2px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+        
+        .time-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: var(--gray-color);
+        }
+        
+        .music-toggle-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--hyper-gradient);
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .music-toggle-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.7);
+        }
+        
+        /* WhatsApp Button - DUA TOMBOL: NOMOR DAN SALURAN */
+        .whatsapp-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .whatsapp-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border: none;
+            color: white;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-btn.channel {
+            background: linear-gradient(135deg, #075E54, #128C7E);
+            animation-delay: 1s;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.7);
+        }
+        
+        .whatsapp-btn .tooltip {
+            position: absolute;
+            bottom: 55px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 23, 42, 0.9);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .whatsapp-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 100px;
+        }
+        
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--hyper-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+            color: var(--gray-color);
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 1rem 2.5rem;
+            background: var(--hyper-gradient);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .cta-button i {
+            font-size: 1.2rem;
+        }
+        
+        /* Gallery Section */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--hyper-gradient);
+            border-radius: 2px;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        
+        .photo-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .photo-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .photo-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(124, 58, 237, 0.3);
+        }
+        
+        .photo-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .photo-card:hover .photo-img {
+            transform: scale(1.05);
+        }
+        
+        .photo-info {
+            padding: 1.5rem;
+        }
+        
+        .photo-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--light-color);
+        }
+        
+        .photo-date {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .photo-date i {
+            font-size: 0.8rem;
+        }
+        
+        .photo-desc {
+            color: var(--gray-color);
+            font-size: 0.95rem;
+        }
+        
+        /* Enhanced Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible,
+        .fade-in-left.visible,
+        .fade-in-right.visible,
+        .fade-in-up.visible,
+        .scale-in.visible {
+            opacity: 1;
+            transform: translate(0) scale(1);
+        }
+        
+        /* Photo Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            animation: zoomIn 0.5s ease;
+        }
+        
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .modal-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .modal-close:hover {
+            color: var(--secondary-color);
+            transform: rotate(90deg);
+        }
+        
+        .modal-info {
+            position: absolute;
+            bottom: -70px;
+            left: 0;
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 6rem;
+            padding: 3rem 5%;
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            background: var(--hyper-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-text {
+            color: var(--gray-color);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light-color);
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-icon:hover {
+            background: var(--hyper-gradient);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* 4K Full HD Responsive */
+        @media (min-width: 2560px) {
+            .container {
+                max-width: 2000px;
+            }
+            
+            .hero h1 {
+                font-size: 5.5rem;
+            }
+            
+            .section-title {
+                font-size: 3.5rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+                gap: 3rem;
+            }
+            
+            .photo-img {
+                height: 300px;
+            }
+            
+            .music-player {
+                width: 220px;
+                padding: 20px;
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .section-title {
+                font-size: 2.4rem;
+            }
+            
+            .music-player {
+                width: 200px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+            
+            .music-player {
+                width: 180px;
+                padding: 12px;
+            }
+            
+            .whatsapp-container {
+                bottom: 15px;
+                left: 15px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .music-player-container {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .music-player {
+                width: 160px;
+                padding: 10px;
+            }
+            
+            .whatsapp-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+            
+            .header-element {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <!-- Enhanced Professional Background Elements -->
+    <div class="background-elements" id="backgroundElements">
+        <div class="geometric-element"></div>
+        <div class="geometric-element"></div>
+        <div class="geometric-element"></div>
+        <div class="geometric-element"></div>
+        
+        <!-- Grid Lines -->
+        <div class="grid-lines"></div>
+        
+        <!-- Hexagon Pattern -->
+        <div class="hexagon-pattern"></div>
+        
+        <!-- Light Beams -->
+        <div class="light-beam"></div>
+        
+        <!-- Floating Particles will be added by JavaScript -->
+    </div>
+    
+    <!-- Header Elements -->
+    <div class="header-elements">
+        <div class="header-element"></div>
+        <div class="header-element"></div>
+        <div class="header-element"></div>
+        <div class="header-element"></div>
+    </div>
+    
+    <!-- WhatsApp Container - DUA TOMBOL: NOMOR & SALURAN -->
+    <div class="whatsapp-container">
+        <!-- Tombol WhatsApp Nomor -->
+        <button class="whatsapp-btn" id="whatsappNumberBtn">
+            <i class="fab fa-whatsapp"></i>
+            <div class="tooltip">Chat via WhatsApp</div>
+        </button>
+        
+        <!-- Tombol WhatsApp Channel -->
+        <button class="whatsapp-btn channel" id="whatsappChannelBtn">
+            <i class="fas fa-broadcast-tower"></i>
+            <div class="tooltip">Join WhatsApp Channel</div>
+        </button>
+    </div>
+    
+    <!-- Music Player Container - POJOK KANAN BAWAH -->
+    <div class="music-player-container">
+        <div class="music-player" id="musicPlayer">
+            <div class="player-info">
+                <div class="song-title" id="songTitle">Memories of 8C nesta</div>
+                <div class="song-artist" id="songArtist">Hindia</div>
+            </div>
+            
+            <div class="player-controls">
+                <button class="player-btn" id="playPauseBtn">
+                    <i class="fas fa-play" id="playPauseIcon"></i>
+                </button>
+                <button class="player-btn" id="volumeBtn">
+                    <i class="fas fa-volume-up" id="volumeIcon"></i>
+                </button>
+            </div>
+            
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+            <div class="time-info">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+            
+            <!-- Audio Element Tersembunyi -->
+            <audio id="audioPlayer" preload="auto">
+                <!-- Source audio akan di-set melalui JavaScript -->
+            </audio>
+        </div>
+        
+        <button class="music-toggle-btn" id="musicToggleBtn">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+    
+    <!-- Header -->
+    <header id="mainHeader">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="logo-text">8C<span>Nesta</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="home" class="hero fade-in-up">
+            <h1 class="scroll-glow">Kenangan <br>8C<span>nesta</span></h1>
+            <p>Koleksi foto budak autis yang penuh makna dan estetika, Setiap gambar menyimpan cerita, setiap momen menjadi abadi.</p>
+            <a href="#gallery" class="cta-button">
+                <i class="fas fa-images"></i> tempo budak autis
+            </a>
+        </section>
+        
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <h2 class="section-title fade-in-up">Galeri 8c autis</h2>
+            <div class="gallery-container" id="galleryContainer">
+                <!-- 30 Photo Cards will be generated by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about-section" style="margin-top: 8rem; padding: 5rem 0;">
+            <h2 class="section-title fade-in-up">Tentang Album 8c autis</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;" class="fade-in-up">
+                <p style="font-size: 1.2rem; color: var(--gray-color); margin-bottom: 2rem;">
+                    Album dimas patik adalah kode kenangan yang mewakili momen-momen berharga dalam perjalanan kita. Setiap angka dan huruf memiliki makna mendalam tentang persahabatan, petualangan, dan pertumbuhan bersama.
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Photo Modal -->
+    <div class="modal" id="photoModal">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="" class="modal-img">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-logo scroll-glow">8C nesta</div>
+            <p class="footer-text fade-in-up">Kenangan abadi yang terukir dalam pikiran dan hati.</p>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon fade-in-left"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon fade-in-up"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon fade-in-up"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon fade-in-right"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="copyright fade-in-up">
+                &copy; 2025 8c nesta Memories. All rights reserved. | Designed with kyy Aesthetic
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Data untuk 30 foto
+        const photoData = [
+            { id: 1, title: "dugong ker sare", date: "26 november 2025", desc: "Hari di mana si amad ker sare siga nu paeh,", img: "contoh.jpg" },
+            { id: 2, title: "tah ie si tompel", date: "22 April 2023", desc: "budak na rada idiot sa etik jg autis ", img: "contoh2.jpg" },
+            { id: 3, title: "ie si delu", date: "1 Januari 2025", desc: "hulu na gede", img: "contoh3.jpg" },
+            { id: 4, title: "ncan jadi", date: "18 Juni 2023", desc: "ncan jadi", img: "anime4.jpg" },
+            { id: 5, title: "tah ie bos kiki", date: "30 Juli 2023", desc: "gede ambek na", img: "contoh4.jpg" },
+            { id: 6, title: "Pencapaian Gemilang", date: "12 Agustus 2023", desc: "Hasil dari kerja keras dan dedikasi, dirayakan bersama sebagai bukti kekuatan tim.", img: "anime2.jpg" },
+            { id: 7, title: "Momen Spontan Bahagia", date: "3 September 2023", desc: "Tertawa tanpa alasan, menari di bawah hujan, hidup sepenuhnya di saat ini.", img: "anime3.jpg" },
+            { id: 8, title: "Senja yang Membius", date: "19 September 2023", desc: "Matahari terbenam mengukir siluet kenangan indah yang takkan pernah terlupakan.", img: "anime4.jpg" },
+            { id: 9, title: "Kembali ke Masa Lalu", date: "5 Oktober 2023", desc: "Mengunjungi tempat bersejarah, merasakan nostalgia yang manis dan mengharukan.", img: "anime1.jpg" },            { id: 10, title: "Festival Warna-warni", date: "21 Oktober 2023", desc: "Merayakan keberagaman dan keindahan budaya dengan penuh sukacita.", img: "anime2.jpg" },            
+            { id: 11, title: "Puncak Gunung Impian", date: "2 November 2023", desc: "Setelah perjuangan panjang, akhirnya sampai di puncak dengan pemandangan memukau.", img: "anime3.jpg" },
+            { id: 12, title: "Pantai dan Sunset", date: "15 November 2023", desc: "Ombak, pasir, dan matahari terbenam menciptakan harmoni yang sempurna.", img: "anime4.jpg" },
+            { id: 13, title: "Karya Seni Kolaboratif", date: "28 November 2023", desc: "Menciptakan sesuatu yang indah bersama-sama, ekspresi jiwa dalam bentuk seni.", img: "anime1.jpg" },
+            { id: 14, title: "Makan Malam Spesial", date: "10 Desember 2023", desc: "Berbagi cerita dan tawa di meja makan, makanan terasa lebih nikmat bersama.", img: "anime2.jpg" },
+            { id: 15, title: "Perayaan Tahun Baru", date: "31 Desember 2023", desc: "Menyambut tahun baru dengan harapan dan semangat baru bersama orang tersayang.", img: "anime3.jpg" },
+            { id: 16, title: "Pertunjukan Seni Malam", date: "14 Januari 2024", desc: "Lampu, musik, dan performa spektakuler menciptakan malam yang magis.", img: "anime4.jpg" },
+            { id: 17, title: "Belajar Bersama", date: "27 Januari 2024", desc: "Berbagi pengetahuan, saling mendukung, dan tumbuh bersama sebagai tim.", img: "anime1.jpg" },
+            { id: 18, title: "Kejutan Ulang Tahun", date: "8 Februari 2024", desc: "Momen kejutan yang penuh emosi dan kebahagiaan untuk hari spesial.", img: "anime2.jpg" },
+            { id: 19, title: "Konser Musik Epik", date: "22 Februari 2024", desc: "Bergoyang bersama di antara kerumunan, musik menyatukan kita semua.", img: "anime3.jpg" },
+            { id: 20, title: "Perjalanan Jalan Raya", date: "7 Maret 2024", desc: "Jalan panjang, musik favorit, dan pemandangan menakjubkan sepanjang perjalanan.", img: "anime4.jpg" },
+            { id: 21, title: "Piknik di Taman", date: "18 Maret 2024", desc: "Makan siang sederhana di alam terbuka, dikelilingi keindahan dan tawa.", img: "anime1.jpg" },
+            { id: 22, title: "Workshop Kreatif", date: "2 April 2024", desc: "Belajar keterampilan baru, mengeksplorasi kreativitas, dan menghasilkan karya bersama.", img: "anime2.jpg" },
+            { id: 23, title: "Menyaksikan Sunrise", date: "15 April 2024", desc: "Bangun pagi untuk menyaksikan keajaiban matahari terbit, awal yang sempurna.", img: "anime3.jpg" },
+            { id: 24, title: "Festival Lentera", date: "28 April 2024", desc: "Malam yang diterangi oleh ribuan lentera, menciptakan suasana ajaib.", img: "anime4.jpg" },
+            { id: 25, title: "Bermain di Salju", date: "10 Mei 2024", desc: "Salju pertama musim dingin, bola salju, dan manusia salju bersama.", img: "anime1.jpg" },
+            { id: 26, title: "Mendaki Bersama", date: "23 Mei 2024", desc: "Tantangan fisik yang menguji ketahanan, dengan pemandangan indah sebagai hadiah.", img: "anime2.jpg" },
+            { id: 27, title: "Malam Api Unggun", date: "5 Juni 2024", desc: "Berkumpul mengelilingi api, berbagi cerita, dan menikmati kehangatan.", img: "anime3.jpg" },
+            { id: 28, title: "Wisata Kota Tua", date: "18 Juni 2024", desc: "Menelusuri jejak sejarah, arsitektur klasik, dan cerita masa lalu.", img: "anime4.jpg" },
+            { id: 29, title: "Kontes Foto Kreatif", date: "1 Juli 2024", desc: "Berburu angle terbaik, menangkap momen unik dengan perspektif berbeda.", img: "anime1.jpg" },
+            { id: 30, title: "Refleksi Akhir Tahun", date: "15 Juli 2024", desc: "Melihat kembali perjalanan setahun penuh, bersyukur untuk setiap momen.", img: "anime2.jpg" }
+        ];
+        
+        // WhatsApp data - HANYA 2: NOMOR DAN SALURAN
+        const whatsappData = {
+            // GANTI DENGAN NOMOR WHATSAPP ANDA (format: 6281234567890)
+            number: "6281234567890",
+            
+            // GANTI DENGAN LINK SALURAN WHATSAPP ANDA
+            channel: "https://whatsapp.com/channel/0029Vb6tBPB5fM5dTxZCVT1l"
+        };
+        
+        // GANTI DENGAN FILE MUSIK ANDA
+        const musicData = {
+            title: "Memories of 8c nesta", 
+            artist: "Hindia", 
+            // GANTI "music.mp3" DENGAN NAMA FILE MUSIK ANDA
+            // Pastikan file musik berada di folder yang sama dengan file HTML
+            src: "contoh.mp3"
+        };
+        
+        // DOM Elements
+        const galleryContainer = document.getElementById('galleryContainer');
+        const modal = document.getElementById('photoModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalClose = document.getElementById('modalClose');
+        const scrollProgress = document.getElementById('scrollProgress');
+        const backgroundElements = document.getElementById('backgroundElements');
+        
+        // Music Player Elements
+        const musicPlayer = document.getElementById('musicPlayer');
+        const musicToggleBtn = document.getElementById('musicToggleBtn');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const playPauseIcon = document.getElementById('playPauseIcon');
+        const volumeBtn = document.getElementById('volumeBtn');
+        const volumeIcon = document.getElementById('volumeIcon');
+        const progressBar = document.getElementById('progressBar');
+        const progressContainer = document.getElementById('progressContainer');
+        const currentTimeEl = document.getElementById('currentTime');
+        const durationEl = document.getElementById('duration');
+        const songTitle = document.getElementById('songTitle');
+        const songArtist = document.getElementById('songArtist');
+        const audioElement = document.getElementById('audioPlayer');
+        
+        // WhatsApp Elements
+        const whatsappNumberBtn = document.getElementById('whatsappNumberBtn');
+        const whatsappChannelBtn = document.getElementById('whatsappChannelBtn');
+        
+        // Music Player Variables
+        let isPlaying = false;
+        let isPlayerVisible = false;
+        let isMuted = false;
+        
+        // Generate 30 photo cards
+        photoData.forEach((photo, index) => {
+            const photoCard = document.createElement('div');
+            photoCard.className = `photo-card fade-in-up scale-in`;
+            photoCard.style.transitionDelay = `${index * 0.05}s`;
+            
+            photoCard.innerHTML = `
+                <img src="${photo.img}" alt="${photo.title}" class="photo-img">
+                <div class="photo-info">
+                    <h3 class="photo-title">${photo.title}</h3>
+                    <div class="photo-date"><i class="far fa-calendar"></i> ${photo.date}</div>
+                    <p class="photo-desc">${photo.desc}</p>
+                </div>
+            `;
+            
+            galleryContainer.appendChild(photoCard);
+        });
+        
+        // Initialize Music Player - DIPERBAIKI
+        function initMusicPlayer() {
+            console.log("Initializing music player...");
+            
+            // Set song info
+            songTitle.textContent = musicData.title;
+            songArtist.textContent = musicData.artist;
+            
+            // Setup audio element dengan cara yang benar
+            audioElement.src = musicData.src;
+            audioElement.volume = 0.7; // Volume default 70%
+            audioElement.preload = "auto";
+            
+            console.log("Audio source set to:", musicData.src);
+            
+            // Player event listeners
+            playPauseBtn.addEventListener('click', togglePlayPause);
+            volumeBtn.addEventListener('click', toggleMute);
+            musicToggleBtn.addEventListener('click', togglePlayer);
+            progressContainer.addEventListener('click', setProgress);
+            
+            // Audio event listeners
+            audioElement.addEventListener('timeupdate', updateProgress);
+            audioElement.addEventListener('loadedmetadata', () => {
+                console.log("Audio metadata loaded, duration:", audioElement.duration);
+                durationEl.textContent = formatTime(audioElement.duration);
+            });
+            
+            audioElement.addEventListener('canplaythrough', () => {
+                console.log("Audio can play through");
+            });
+            
+            audioElement.addEventListener('play', () => {
+                console.log("Audio started playing");
+            });
+            
+            audioElement.addEventListener('pause', () => {
+                console.log("Audio paused");
+            });
+            
+            audioElement.addEventListener('error', (e) => {
+                console.error("Audio error:", e);
+                console.error("Error details:", audioElement.error);
+                
+                // Fallback jika ada error
+                songTitle.textContent = "Error Loading Music";
+                songArtist.textContent = "Check your music file";
+                
+                // Coba format URL yang berbeda
+                const musicFileName = musicData.src.split('/').pop();
+                console.log("Trying alternative path:", musicFileName);
+                
+                // Coba loading ulang dengan path yang lebih sederhana
+                setTimeout(() => {
+                    audioElement.src = musicFileName;
+                    console.log("Tried reloading with filename only:", musicFileName);
+                }, 1000);
+            });
+            
+            audioElement.addEventListener('ended', () => {
+                console.log("Audio ended, restarting...");
+                // Auto-replay when song ends
+                audioElement.currentTime = 0;
+                playSong();
+            });
+            
+            // Auto-play on load dengan permission handling
+            setTimeout(() => {
+                console.log("Attempting to play audio...");
+                playSongWithPermission();
+            }, 2000);
+        }
+        
+        // Play song dengan permission handling
+        function playSongWithPermission() {
+            const playPromise = audioElement.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    console.log("Audio play successful");
+                    isPlaying = true;
+                    playPauseIcon.classList.remove('fa-play');
+                    playPauseIcon.classList.add('fa-pause');
+                    musicToggleBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                }).catch(error => {
+                    console.warn("Autoplay prevented:", error);
+                    
+                    // Tampilkan pesan untuk user
+                    songTitle.textContent = "Click play to start music";
+                    songArtist.textContent = "Autoplay blocked by browser";
+                    
+                    // Reset UI
+                    isPlaying = false;
+                    playPauseIcon.classList.remove('fa-pause');
+                    playPauseIcon.classList.add('fa-play');
+                    musicToggleBtn.innerHTML = '<i class="fas fa-music"></i>';
+                });
+            }
+        }
+        
+        // Play song
+        function playSong() {
+            const playPromise = audioElement.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    isPlaying = true;
+                    playPauseIcon.classList.remove('fa-play');
+                    playPauseIcon.classList.add('fa-pause');
+                    musicToggleBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                }).catch(error => {
+                    console.error("Play error:", error);
+                    isPlaying = false;
+                });
+            }
+        }
+        
+        // Pause song
+        function pauseSong() {
+            audioElement.pause();
+            isPlaying = false;
+            playPauseIcon.classList.remove('fa-pause');
+            playPauseIcon.classList.add('fa-play');
+            musicToggleBtn.innerHTML = '<i class="fas fa-music"></i>';
+        }
+        
+        // Toggle play/pause
+        function togglePlayPause() {
+            if (isPlaying) {
+                pauseSong();
+            } else {
+                playSong();
+            }
+        }
+        
+        // Toggle mute/unmute
+        function toggleMute() {
+            isMuted = !isMuted;
+            audioElement.muted = isMuted;
+            
+            if (isMuted) {
+                volumeIcon.classList.remove('fa-volume-up');
+                volumeIcon.classList.add('fa-volume-mute');
+            } else {
+                volumeIcon.classList.remove('fa-volume-mute');
+                volumeIcon.classList.add('fa-volume-up');
+            }
+        }
+        
+        // Update progress bar
+        function updateProgress() {
+            const { currentTime, duration } = audioElement;
+            const progressPercent = (currentTime / duration) * 100;
+            progressBar.style.width = `${progressPercent}%`;
+            currentTimeEl.textContent = formatTime(currentTime);
+            
+            // Update duration jika belum ter-set
+            if (duration && durationEl.textContent === "0:00") {
+                durationEl.textContent = formatTime(duration);
+            }
+        }
+        
+        // Set progress on click
+        function setProgress(e) {
+            const width = this.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audioElement.duration;
+            
+            if (duration) {
+                audioElement.currentTime = (clickX / width) * duration;
+            }
+        }
+        
+        // Format time
+        function formatTime(seconds) {
+            if (isNaN(seconds) || seconds === Infinity) return "0:00";
+            
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+        
+        // Toggle player visibility
+        function togglePlayer() {
+            isPlayerVisible = !isPlayerVisible;
+            if (isPlayerVisible) {
+                musicPlayer.classList.add('active');
+            } else {
+                musicPlayer.classList.remove('active');
+            }
+        }
+        
+        // Initialize WhatsApp Buttons
+        function initWhatsAppButtons() {
+            // WhatsApp Number Button
+            whatsappNumberBtn.addEventListener('click', () => {
+                const message = "Halo! Saya ingin menghubungi Anda terkait KAA707.";
+                const url = `https://wa.me/${whatsappData.number}?text=${encodeURIComponent(message)}`;
+                window.open(url, '_blank');
+            });
+            
+            // WhatsApp Channel Button
+            whatsappChannelBtn.addEventListener('click', () => {
+                window.open(whatsappData.channel, '_blank');
+            });
+        }
+        
+        // Create Floating Particles
+        function createParticles() {
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random position
+                const left = Math.random() * 100;
+                
+                particle.style.left = `${left}%`;
+                particle.style.top = `${Math.random() * 20}%`;
+                
+                // Random animation duration and delay
+                const duration = 15 + Math.random() * 20;
+                const delay = Math.random() * 5;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `${delay}s`;
+                
+                backgroundElements.appendChild(particle);
+            }
+        }
+        
+        // Initialize background elements
+        function initBackgroundElements() {
+            // Create particles
+            createParticles();
+        }
+        
+        // Enhanced Scroll Progress
+        function updateScrollProgress() {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.width = `${scrolled}%`;
+            
+            // Add glow effect based on scroll position
+            const glowIntensity = Math.min(scrolled / 30, 1);
+            scrollProgress.style.boxShadow = `0 0 ${10 + glowIntensity * 20}px var(--primary-color)`;
+        }
+        
+        // Enhanced Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Add bounce effect for photo cards
+                    if (entry.target.classList.contains('photo-card')) {
+                        setTimeout(() => {
+                            entry.target.style.transform = 'translateY(-10px) scale(1.02)';
+                            setTimeout(() => {
+                                entry.target.style.transform = 'translateY(0) scale(1)';
+                            }, 300);
+                        }, 100);
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for scroll animation
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-up, .scale-in, .photo-card, .scroll-glow').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Enhanced scroll effect for background elements
+        function updateBackgroundOnScroll() {
+            const scrollY = window.scrollY;
+            
+            // Move particles based on scroll
+            const particles = document.querySelectorAll('.particle');
+            particles.forEach((particle, index) => {
+                const speed = 0.1 + (index % 5) * 0.05;
+                const yOffset = scrollY * speed * 0.05;
+                particle.style.transform = `translateY(${yOffset}px)`;
+            });
+            
+            // Move header elements with parallax
+            const headerElements = document.querySelectorAll('.header-element');
+            headerElements.forEach((el, index) => {
+                const speed = 0.05 + (index * 0.01);
+                const yOffset = scrollY * speed;
+                el.style.transform = `translateY(${yOffset}px)`;
+            });
+        }
+        
+        // Photo Card Click Animation & Modal
+        document.addEventListener('click', function(e) {
+            const photoCard = e.target.closest('.photo-card');
+            
+            if (photoCard) {
+                // Add click animation
+                photoCard.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    photoCard.style.transform = '';
+                }, 200);
+                
+                // Get photo data
+                const imgSrc = photoCard.querySelector('.photo-img').src;
+                const title = photoCard.querySelector('.photo-title').textContent;
+                const date = photoCard.querySelector('.photo-date').textContent;
+                const desc = photoCard.querySelector('.photo-desc').textContent;
+                
+                // Set modal content
+                modalImage.src = imgSrc;
+                modalTitle.textContent = title;
+                modalDesc.textContent = `${date} - ${desc}`;
+                
+                // Show modal with enhanced animation
+                setTimeout(() => {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }, 300);
+            }
+        });
+        
+        // Close Modal
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Enhanced Smooth scrolling for navigation links
+        document.querySelectorAll('nav a, .cta-button').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Add click animation to the button
+                        if (this.classList.contains('cta-button')) {
+                            this.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                this.style.transform = '';
+                            }, 200);
+                        }
+                        
+                        // Enhanced smooth scroll to target
+                        const targetPosition = targetElement.offsetTop - 100;
+                        const startPosition = window.pageYOffset;
+                        const distance = targetPosition - startPosition;
+                        const duration = 1000;
+                        let start = null;
+                        
+                        function step(timestamp) {
+                            if (!start) start = timestamp;
+                            const progress = timestamp - start;
+                            const percentage = Math.min(progress / duration, 1);
+                            
+                            // Easing function for smooth scroll
+                            const easeInOutCubic = t => t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1;
+                            window.scrollTo(0, startPosition + distance * easeInOutCubic(percentage));
+                            
+                            if (progress < duration) {
+                                window.requestAnimationFrame(step);
+                            }
+                        }
+                        
+                        window.requestAnimationFrame(step);
+                    }
+                }
+            });
+        });
+        
+        // Enhanced Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            
+            // Update scroll progress
+            updateScrollProgress();
+            
+            // Update background elements on scroll
+            updateBackgroundOnScroll();
+            
+            // Enhanced header effect
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(15, 23, 42, 0.95)';
+                header.style.boxShadow = '0 5px 20px rgba(124, 58, 237, 0.2)';
+                header.style.padding = '1.2rem 5%';
+                header.style.backdropFilter = 'blur(15px)';
+            } else {
+                header.style.backgroundColor = 'rgba(15, 23, 42, 0.8)';
+                header.style.boxShadow = 'none';
+                header.style.padding = '2rem 5%';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+        });
+        
+        // Initialize everything on load
+        window.addEventListener('load', () => {
+            console.log("Page loaded, initializing...");
+            
+            // Initialize background elements
+            initBackgroundElements();
+            
+            // Initialize music player
+            initMusicPlayer();
+            
+            // Initialize WhatsApp buttons
+            initWhatsAppButtons();
+            
+            // Animate hero section
+            document.querySelector('.hero').classList.add('visible');
+            
+            // Initialize scroll progress
+            updateScrollProgress();
+            
+            // Auto-show music player after 3 seconds
+            setTimeout(() => {
+                musicPlayer.classList.add('active');
+                isPlayerVisible = true;
+            }, 3000);
+        });
+        
+        // Mouse move effect for background elements
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            // Move header elements slightly with mouse
+            const headerElements = document.querySelectorAll('.header-element');
+            headerElements.forEach((el, index) => {
+                const speed = 0.3 + (index * 0.1);
+                const x = (mouseX * 5 * speed) - 2.5;
+                const y = (mouseY * 5 * speed) - 2.5;
+                
+                const currentTransform = el.style.transform || '';
+                if (currentTransform.includes('translateY')) {
+                    const currentY = parseFloat(currentTransform.match(/translateY\(([^)]+)px\)/)?.[1] || 0);
+                    el.style.transform = `translate(${x}px, ${currentY + y}px)`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
